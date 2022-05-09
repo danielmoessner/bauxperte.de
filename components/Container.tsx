@@ -13,7 +13,9 @@ function Container({ children, layout }: Props) {
     maxWidth = "max-w-8xl";
   }
   return (
-    <div className={`${maxWidth} mx-auto px-3 sm:px-6 lg:px-8`}>{children}</div>
+    <div className={`${maxWidth} mx-auto relative px-3 sm:px-6 lg:px-8`}>
+      {children}
+    </div>
   );
 }
 

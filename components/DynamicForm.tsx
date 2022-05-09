@@ -75,8 +75,8 @@ function Component({
                   type="button"
                   onClick={() => setEnabled(!enabled)}
                   className={`${
-                    enabled ? "bg-green-700" : "bg-gray-200"
-                  } relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700`}
+                    enabled ? "bg-x-green" : "bg-gray-200"
+                  } relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-x-green`}
                   role="switch"
                   aria-checked="false"
                 >

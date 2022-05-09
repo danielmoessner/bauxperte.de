@@ -13,6 +13,7 @@ import SectionIndexTop from "../components/SectionIndexTop";
 import SectionIndexFeatures from "../components/SectionIndexFeatures";
 import SectionIndexServices from "../components/SectionIndexServices";
 import SectionIndexCta from "../components/SectionIndexCta";
+import SectionIndexHeader from "../components/SectionIndexHeader";
 
 interface Props {
   animals: Animal[];
@@ -31,6 +32,7 @@ function Page({ animals }: Props) {
       </Head>
       <Seo meta={page.meta} />
 
+      <SectionIndexHeader />
       <SectionIndexTop />
       <SectionIndexFeatures />
       <SectionIndexServices />

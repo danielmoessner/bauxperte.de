@@ -18,27 +18,36 @@ const features = [
 
 function Component() {
   return (
-    <section className="pt-32 pb-32 bg-green-50">
-      <Container layout="sm">
-        <Heading element="h2" size="h3">
-          Ich freue mich, wenn auch Sie von meine Kompetenzen profitieren und
-          wir so Qualitäts-, Zeit- und Kostenvorteile für Ihre Projekte und
-          Bauvorhaben erzielen:
-        </Heading>
-        <div className="mt-12">
-          <ul className="space-y-2">
-            {features.map((feature) => (
-              <ListFeature key={feature}>{feature}</ListFeature>
-            ))}
-          </ul>
-        </div>
-        <div className="mt-16">
-          <p className="text-green-900">
-            Zu meinen Auftraggebern zählen Bauträger, Bauunternehmer sowie
-            Ingenieur- und Architekturbüros. Diese schätzen insbesondere die{" "}
-            <b>Optimierung der Bauabläufe</b> und die <b>Qualitätssteigerung</b>{" "}
-            durch geballte Fachkompetenz.
-          </p>
+    <section className="">
+      <Container layout="md">
+        <div className="bg-x-lime bg-opacity-20">
+          <Container layout="sm">
+            <div className="pt-32 pb-32">
+              <Heading element="h2" size="h3" color="text-x-green">
+                <span>
+                  Ich freue mich, wenn auch Sie von meine Kompetenzen
+                  profitieren und wir so{" "}
+                  <b>Qualitäts-, Zeit- und Kostenvorteile</b> für Ihre Projekte
+                  und Bauvorhaben erzielen:
+                </span>
+              </Heading>
+              <div className="mt-12">
+                <ul className="space-y-2">
+                  {features.map((feature) => (
+                    <ListFeature key={feature}>{feature}</ListFeature>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-16">
+                <p className="text-x-green">
+                  Zu meinen Auftraggebern zählen Bauträger, Bauunternehmer sowie
+                  Ingenieur- und Architekturbüros. Diese schätzen insbesondere
+                  die <b>Optimierung der Bauabläufe</b> und die{" "}
+                  <b>Qualitätssteigerung</b> durch geballte Fachkompetenz.
+                </p>
+              </div>
+            </div>
+          </Container>
         </div>
       </Container>
     </section>

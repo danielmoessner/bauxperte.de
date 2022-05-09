@@ -3,7 +3,7 @@ import Heading from "./Heading";
 
 function Component() {
   return (
-    <section className="py-32">
+    <section className="py-32" id="ueber-mich">
       <Container layout="sm">
         <Heading element="h1" size="h1">
           Mit dem BauXperten mehr bewegen

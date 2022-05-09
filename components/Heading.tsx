@@ -20,7 +20,7 @@ function Component({ element, size, color, children, classes }) {
 Component.defaultProps = {
   element: "div",
   size: "h1",
-  color: "text-green-700",
+  color: "text-x-lime",
   classes: "",
 };
 

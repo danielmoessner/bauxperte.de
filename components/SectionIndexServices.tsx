@@ -4,7 +4,7 @@ import Heading from "./Heading";
 
 function Component() {
   return (
-    <section className="pt-32 pb-32">
+    <section className="pt-32 pb-32" id="leistungen">
       <Container layout="sm">
         <Heading element="h2" size="h2">
           Leistungsüberblick für Ihre Bauvorhaben und Projekte

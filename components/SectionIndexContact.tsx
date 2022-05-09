@@ -29,7 +29,7 @@ const fields = [
 
 function Component() {
   return (
-    <section className="pt-32 pb-32">
+    <section className="pt-32 pb-32" id="kontakt">
       <Container layout="sm">
         <Heading size="h2" element="h2">
           So erreichen Sie mich
@@ -38,11 +38,12 @@ function Component() {
           <div className="grid grid-cols-2 gap-8">
             <div className="relative overflow-hidden">
               <Image
-                src="/media/deer.jpg"
+                src="/img/roman.jpeg"
                 width={1000}
                 height={1000}
                 objectFit="cover"
                 alt="Bild von Roman Sabeder"
+                objectPosition="left"
               />
               <div className="absolute top-0 left-0 w-32 origin-top-right transform rotate-45 bg-white h-96"></div>
               <div className="absolute top-0 right-0 w-32 origin-top-left transform -rotate-45 bg-white h-96"></div>
@@ -51,7 +52,7 @@ function Component() {
             </div>
             <div className="flex items-center">
               <div className="">
-                <div className="prose prose-green">
+                <div className="prose">
                   <p className="font-bold">
                     Benötigen auch Sie zusätzliche Fachleistungen zur
                     erfolgreichen und effizienten Unterstützung Ihrer Projekte

@@ -55,7 +55,7 @@ function Component({
     `inline-flex items-center border-2 border-transparent font-medium rounded-md shadow-sm ${ring} ${ringOffset} ${size} ${bColor}`;
 
   return (
-    <div>
+    <div className="bg-white rounded-md">
       {element === "Link" ? (
         <Link href={href}>
           <a className={bClassName}>{children}</a>
@@ -84,7 +84,7 @@ Component.defaultProps = {
   // color
   color: null,
   primaryColor:
-    "text-white bg-green-700 hover:bg-green-800 focus:ring-green-600",
+    "text-green-900 bg-x-lime hover:bg-opacity-90 focus:ring-x-lime",
   secondaryColor:
     "text-green-700 bg-green-100 hover:bg-green-200 focus:ring-green-500",
   // ring
