@@ -43,7 +43,7 @@ function Component({
   }, [name]);
 
   return (
-    <div className="max-w-xl">
+    <div className="">
       <div className={`${formSent ? "block" : "hidden"}`}>
         <div className="pt-24">
           <Heading element="div" size="h3">
@@ -75,8 +75,8 @@ function Component({
                   type="button"
                   onClick={() => setEnabled(!enabled)}
                   className={`${
-                    enabled ? "bg-gray-600" : "bg-gray-200"
-                  } relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500`}
+                    enabled ? "bg-green-700" : "bg-gray-200"
+                  } relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700`}
                   role="switch"
                   aria-checked="false"
                 >

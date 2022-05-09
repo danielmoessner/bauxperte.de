@@ -2,9 +2,8 @@
 collection: page
 slug: home
 meta:
-  description: Informationen und Wissenswertes über die in Deutschland lebenden
-    Wildtiere. Von Wildschweinen über Rehen bis hin zu den Bergenten.
-  title: Wildtiere in Deutschland
+  description: Roman Sabeder
+  title: BauXperte - Roman Sabeder
   image: ""
 header:
   title: Wildtiere in Deutschland

@@ -6,7 +6,7 @@ interface Props {
 function Container({ children, layout }: Props) {
   let maxWidth = "";
   if (layout === "sm") {
-    maxWidth = "max-w-6xl";
+    maxWidth = "max-w-4xl";
   } else if (layout === "md") {
     maxWidth = "max-w-7xl";
   } else if (layout === "lg") {

@@ -83,9 +83,10 @@ Component.defaultProps = {
   size: "px-4 py-2 text-sm",
   // color
   color: null,
-  primaryColor: "text-white bg-gray-600 hover:bg-gray-700 focus:ring-gray-500",
+  primaryColor:
+    "text-white bg-green-700 hover:bg-green-800 focus:ring-green-600",
   secondaryColor:
-    "text-gray-700 bg-gray-100 hover:bg-gray-200 focus:ring-gray-500",
+    "text-green-700 bg-green-100 hover:bg-green-200 focus:ring-green-500",
   // ring
   ring: "focus:outline-none focus:ring-2 focus:ring-offset-2",
   ringOffset: "ring-offset-pink-500",

@@ -8,6 +8,11 @@ import { attributes } from "../content/page/home.md";
 import { getAllMarkdown } from "../lib/getMarkdown";
 import { Animal } from "../types/animal";
 import Head from "next/head";
+import SectionIndexContact from "../components/SectionIndexContact";
+import SectionIndexTop from "../components/SectionIndexTop";
+import SectionIndexFeatures from "../components/SectionIndexFeatures";
+import SectionIndexServices from "../components/SectionIndexServices";
+import SectionIndexCta from "../components/SectionIndexCta";
 
 interface Props {
   animals: Animal[];
@@ -25,7 +30,14 @@ function Page({ animals }: Props) {
         ></script>
       </Head>
       <Seo meta={page.meta} />
-      <Header header={page.header} />
+
+      <SectionIndexTop />
+      <SectionIndexFeatures />
+      <SectionIndexServices />
+      <SectionIndexCta />
+      <SectionIndexContact />
+
+      {/* <Header header={page.header} />
       <section>
         <Container layout="sm">
           <div className="pt-8 pb-20 sm:pt-4 lg:pt-6">
@@ -40,7 +52,7 @@ function Page({ animals }: Props) {
             </div>
           </div>
         </Container>
-      </section>
+      </section> */}
     </Layout>
   );
 }
