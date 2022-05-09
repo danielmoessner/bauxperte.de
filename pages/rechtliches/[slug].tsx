@@ -31,7 +31,7 @@ function Page({ page }: Props) {
       <section className="pt-5 pb-20">
         <Container layout="sm">
           <article
-            className="prose"
+            className="prose max-w-none"
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: page.html }}
           />
