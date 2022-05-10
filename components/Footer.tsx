@@ -9,38 +9,40 @@ function Component() {
     <section className="bg-white ">
       <Container layout="md">
         <div className="py-3 bg-x-green">
-          <ul className="flex items-center space-x-8">
-            {linkList.map((item) => {
-              let element = <div>?</div>;
-              if (item.type === "text")
-                element = (
-                  <div className="text-base text-gray-200 whitespace-pre-line">
-                    {item.text}
-                  </div>
-                );
-              if (item.type === "link")
-                element = (
-                  <Link href={item.url}>
-                    <a className="text-base text-gray-200 hover:text-gray-100">
+          <Container layout="sm">
+            <ul className="flex items-center space-x-8">
+              {linkList.map((item) => {
+                let element = <div>?</div>;
+                if (item.type === "text")
+                  element = (
+                    <div className="text-base text-gray-200 whitespace-pre-line">
+                      {item.text}
+                    </div>
+                  );
+                if (item.type === "link")
+                  element = (
+                    <Link href={item.url}>
+                      <a className="text-base text-gray-200 hover:text-gray-100">
+                        {item.text}
+                      </a>
+                    </Link>
+                  );
+                if (item.type === "externalLink")
+                  element = (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      className="text-base text-gray-200 hover:text-gray-100"
+                      rel="noreferrer"
+                    >
                       {item.text}
                     </a>
-                  </Link>
-                );
-              if (item.type === "externalLink")
-                element = (
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    className="text-base text-gray-200 hover:text-gray-100"
-                    rel="noreferrer"
-                  >
-                    {item.text}
-                  </a>
-                );
+                  );
 
-              return <li key={`${item.text}${item.type}`}>{element}</li>;
-            })}
-          </ul>
+                return <li key={`${item.text}${item.type}`}>{element}</li>;
+              })}
+            </ul>
+          </Container>
         </div>
       </Container>
     </section>
