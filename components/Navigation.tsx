@@ -89,7 +89,7 @@ function Component() {
                         <div className="flex items-center justify-between pb-2 border-b">
                           <Link href="/">
                             <h1 className="text-3xl font-bold leading-tight tracking-tight text-gray-700 transition duration-150 ease-in-out hover:text-gray-800">
-                              {navigation.title}
+                              {/* {navigation.title} */}
                             </h1>
                           </Link>
                           <div className="">
