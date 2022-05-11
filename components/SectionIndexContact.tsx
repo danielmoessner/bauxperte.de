@@ -2,6 +2,7 @@ import Image from "next/image";
 import Container from "./Container";
 import Heading from "./Heading";
 import DynamicForm from "./DynamicForm";
+import { Index } from "../types/pages";
 
 const fields = [
   {
@@ -27,12 +28,18 @@ const fields = [
   },
 ];
 
-function Component() {
+interface Props {
+  content: Index["contact"];
+}
+
+function Component(props: Props) {
+  const content = props.content;
+
   return (
     <section className="pt-32 pb-32" id="kontakt">
       <Container layout="sm">
         <Heading size="h2" element="h2">
-          So erreichen Sie mich
+          {content.title}
         </Heading>
         <div className="mt-20">
           <div className="grid grid-cols-2 gap-8">
@@ -52,30 +59,11 @@ function Component() {
             </div>
             <div className="flex items-center">
               <div className="">
-                <div className="prose">
-                  <p className="font-bold">
-                    Benötigen auch Sie zusätzliche Fachleistungen zur
-                    erfolgreichen und effizienten Unterstützung Ihrer Projekte
-                    und Teams?
-                  </p>
-                  <p>Gerne unterstütze ich Sie fachgerecht auf Projektbasis.</p>
-                  <p>
-                    Rufen Sie mich für ein <b>kostenloses Erstgespräch</b> gerne
-                    unter <a href="">0171 95 28 649</a> an.
-                  </p>
-                  <p>Ich freue mich auf Ihre Anfrage!</p>
-                  <p>
-                    Ihr{" "}
-                    <span className="font-serif text-lg font-medium text-gray-700">
-                      <i>Roman Sabeder</i>
-                    </span>
-                  </p>
-                  <p>
-                    <br />
-                    <a href="">www.bauxperte.de</a> <br />
-                    <a href="">rs@bauxperte.de</a>
-                  </p>
-                </div>
+                <div
+                  className="prose"
+                  // eslint-disable-next-line react/no-danger
+                  dangerouslySetInnerHTML={{ __html: content.text }}
+                ></div>
               </div>
             </div>
           </div>

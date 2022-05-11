@@ -2,13 +2,20 @@ import Container from "./Container";
 import Heading from "./Heading";
 import LogoX from "./LogoX";
 import Image from "next/image";
+import { Index } from "../types/pages";
 
-function Component() {
+interface Props {
+  content: Index["services"];
+}
+
+function Component(props: Props) {
+  const content = props.content;
+
   return (
     <section className="pt-32 pb-32" id="leistungen">
       <Container layout="sm">
         <Heading element="h2" size="h2">
-          Leistungsüberblick für Ihre Bauvorhaben und Projekte
+          <div>{content.title}</div>
         </Heading>
         <div className="mt-16">
           <div className="relative max-w-md mx-auto">
@@ -16,9 +23,8 @@ function Component() {
             {/* top */}
             <div className="absolute left-0 right-0 w-0.5 h-20 mx-auto bg-x-lime top-16"></div>
             <div className="absolute left-0 right-0 mx-auto top-1">
-              <p className="font-medium text-center">
-                Baumeister <br />
-                Bausachverständiger
+              <p className="font-medium text-center whitespace-pre">
+                {content.text_top}
               </p>
             </div>
             {/* top left */}
@@ -34,7 +40,9 @@ function Component() {
               />
 
               <div className="absolute transform -translate-x-1/2 left-1/2 top-12">
-                <p className="font-normal text-center">Baumeisterarbeiten</p>
+                <p className="font-normal text-center whitespace-pre">
+                  {content.text_top_left}
+                </p>
               </div>
             </div>
             <div className="absolute left-10 w-24 h-0.5 mx-auto bg-x-lime top-52"></div>
@@ -47,31 +55,13 @@ function Component() {
                 alt="Icon"
               />
               <div className="absolute transform -translate-x-1/2 left-1/2 top-12">
-                <p className="font-normal text-center">
-                  Privatgutachten <br />
-                  Wertgutachten <br />
-                  Schadensgutachten
+                <p className="font-normal text-center whitespace-pre">
+                  {content.text_top_right}
                 </p>
               </div>
             </div>
             <div className="absolute right-10 w-24 h-0.5 mx-auto bg-x-lime top-52"></div>
             {/* bottom left */}
-            <div className="absolute flex items-center justify-center w-12 h-12 mx-auto transform translate-y-1/2 translate-x-14 right-10 bottom-60">
-              <Image
-                src="/icons/Icon_Bauabnahmen_Polygon.png"
-                width={360}
-                height={311}
-                alt="Icon"
-              />
-              <div className="absolute transform -translate-x-1/2 left-1/2 top-12">
-                <p className="font-normal text-center">
-                  Baubegleitung <br />
-                  Bauabnahmen
-                </p>
-              </div>
-            </div>
-            <div className="absolute left-10 w-24 h-0.5 mx-auto bg-x-lime bottom-60"></div>
-            {/* bottom right */}
             <div className="absolute flex items-center justify-center w-12 h-12 mx-auto transform translate-y-1/2 -translate-x-14 left-10 bottom-60">
               <Image
                 src="/icons/Icon_Baubegleitung_Polygon.png"
@@ -80,13 +70,27 @@ function Component() {
                 alt="Icon"
               />
               <div className="absolute w-64 transform -translate-x-1/2 left-1/2 top-12">
-                <p className="font-normal text-center">
-                  Schlüsselfertiger Bau <br />
-                  Hoch- und Ingenieurbau
+                <p className="font-normal text-center whitespace-pre">
+                  {content.text_bottom_left}
                 </p>
               </div>
             </div>
             <div className="absolute right-10 w-24 h-0.5 mx-auto bg-x-lime bottom-60"></div>
+            {/* bottom right */}
+            <div className="absolute flex items-center justify-center w-12 h-12 mx-auto transform translate-y-1/2 translate-x-14 right-10 bottom-60">
+              <Image
+                src="/icons/Icon_Bauabnahmen_Polygon.png"
+                width={360}
+                height={311}
+                alt="Icon"
+              />
+              <div className="absolute transform -translate-x-1/2 left-1/2 top-12">
+                <p className="font-normal text-center whitespace-pre">
+                  {content.text_bottom_right}
+                </p>
+              </div>
+            </div>
+            <div className="absolute left-10 w-24 h-0.5 mx-auto bg-x-lime bottom-60"></div>
             {/* bottom */}
             <div className="absolute left-0 right-0 flex items-center justify-center w-12 h-12 mx-auto transform -bottom-3">
               <Image
@@ -98,8 +102,8 @@ function Component() {
             </div>
             <div className="absolute bottom-10 left-0 right-0 w-0.5 h-28 mx-auto bg-x-lime"></div>
             <div className="absolute left-0 right-0 mx-auto -bottom-10">
-              <p className="font-normal text-center">
-                kostensparendes &amp; innovatives Bauen
+              <p className="font-normal text-center whitespace-pre">
+                {content.text_bottom}
               </p>
             </div>
           </div>

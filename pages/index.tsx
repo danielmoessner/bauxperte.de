@@ -1,12 +1,6 @@
 import Layout from "../components/Layout";
-import AnimalCard from "../components/AnimalCard";
 import Seo from "../components/Seo";
-import Animate from "../components/Animate";
-import Container from "../components/Container";
-import Header from "../components/Header";
-import { attributes } from "../content/page/home.md";
-import { getAllMarkdown } from "../lib/getMarkdown";
-import { Animal } from "../types/animal";
+import { findMarkdown } from "../lib/getMarkdown";
 import Head from "next/head";
 import SectionIndexContact from "../components/SectionIndexContact";
 import SectionIndexTop from "../components/SectionIndexTop";
@@ -14,13 +8,17 @@ import SectionIndexFeatures from "../components/SectionIndexFeatures";
 import SectionIndexServices from "../components/SectionIndexServices";
 import SectionIndexCta from "../components/SectionIndexCta";
 import SectionIndexHeader from "../components/SectionIndexHeader";
+import { Index } from "../types/pages";
+import md from "markdown-it";
+import { Markdown } from "../types/shared";
+import * as v8 from "v8";
 
 interface Props {
-  animals: Animal[];
+  page: Markdown<Index>;
 }
 
-function Page({ animals }: Props) {
-  const page = attributes;
+function Component(props: Props) {
+  const page = props.page.frontmatter;
 
   return (
     <Layout>
@@ -33,11 +31,11 @@ function Page({ animals }: Props) {
       <Seo meta={page.meta} />
 
       <SectionIndexHeader />
-      <SectionIndexTop />
-      <SectionIndexFeatures />
-      <SectionIndexServices />
-      <SectionIndexCta />
-      <SectionIndexContact />
+      <SectionIndexTop content={page.top} />
+      <SectionIndexFeatures content={page.features} />
+      <SectionIndexServices content={page.services} />
+      <SectionIndexCta content={page.cta} />
+      <SectionIndexContact content={page.contact} />
 
       {/* <Header header={page.header} />
       <section>
@@ -60,13 +58,21 @@ function Page({ animals }: Props) {
 }
 
 export async function getStaticProps() {
-  const animalsList = getAllMarkdown<Animal>("animal");
+  const origPage = findMarkdown<Index>("home", "page");
+  // copy the object in order to render frontmatter correctly
+  const page = v8.deserialize(v8.serialize(origPage));
+  page.frontmatter.top.text = md().render(page.frontmatter.top.text);
+  page.frontmatter.features.title = md().render(
+    page.frontmatter.features.title
+  );
+  page.frontmatter.features.text = md().render(page.frontmatter.features.text);
+  page.frontmatter.contact.text = md().render(page.frontmatter.contact.text);
 
   return {
     props: {
-      animals: animalsList,
+      page: page,
     },
   };
 }
 
-export default Page;
+export default Component;

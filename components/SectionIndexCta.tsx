@@ -1,7 +1,14 @@
 import Container from "./Container";
 import Heading from "./Heading";
+import { Index } from "../types/pages";
 
-function Component() {
+interface Props {
+  content: Index["cta"];
+}
+
+function Component(props: Props) {
+  const content = props.content;
+
   return (
     <section className="overflow-hidden bg-white">
       <Container layout="md">
@@ -18,8 +25,7 @@ function Component() {
             {/* content */}
             <div className="py-32">
               <Heading size="h2" element="h2" classes="!text-green-50">
-                Reibungslos, innovativ &amp; kostensparend - qualitative
-                Bauabläufe optimal aufeinander abgestimmt.
+                {content.text}
               </Heading>
             </div>
           </Container>

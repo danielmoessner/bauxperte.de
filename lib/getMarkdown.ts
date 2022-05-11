@@ -48,10 +48,15 @@ export function getAllMarkdown<T extends Frontmatter>(
 }
 
 export function findMarkdown<T extends Frontmatter>(
-  slug,
-  collection
+  slug: string,
+  collection: string
 ): Markdown<T> {
   const items = getAllMarkdown<T>(collection);
   const item = items.find((item) => item.slug === slug);
   return loadMarkdown<T>(item._path);
 }
+
+// export function getPage<T extends Frontmatter>(filename) {
+//   const { content, path } = readFile(filename, "page");
+//   const {data, content: markdown}
+// }

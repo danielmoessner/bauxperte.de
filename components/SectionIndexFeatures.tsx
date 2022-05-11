@@ -1,22 +1,16 @@
+import React from "react";
 import Container from "./Container";
 import Heading from "./Heading";
 import ListFeature from "./ListFeature";
+import { Index } from "../types/pages";
 
-const features = [
-  "Baumeister & Projektleitung",
-  "Handwerksmeister im Maurer- und Betonbau",
-  "Schlüsselfertiger Bau",
-  "Verbandsgeprüfter Bausachverständiger",
-  "Wertgutachten, Verkehrsgutachten, Privatgutachten & Schadensgutachten",
-  "Arbeitssicherheit der BG BAU nach VGB 122",
-  "VOB, Gewährleistung & Bau-Normen",
-  "Aufmaß- und Rechnungsprüfung sowie Nachtragsmanagement",
-  "Einhaltung & Sicherstellung von Qualitätsstandards",
-  "Effektive und kostensparende Arbeitsabläufe",
-  "Innovation und pragmatische Lösung am Bauvorhaben",
-];
+interface Props {
+  content: Index["features"];
+}
 
-function Component() {
+function Component(props: Props) {
+  const content = props.content;
+
   return (
     <section className="">
       <Container layout="md">
@@ -24,27 +18,25 @@ function Component() {
           <Container layout="sm">
             <div className="pt-32 pb-32">
               <Heading element="h2" size="h3" color="text-x-green">
-                <span>
-                  Ich freue mich, wenn auch Sie von meine Kompetenzen
-                  profitieren und wir so{" "}
-                  <b>Qualitäts-, Zeit- und Kostenvorteile</b> für Ihre Projekte
-                  und Bauvorhaben erzielen:
-                </span>
+                <div
+                  // eslint-disable-next-line react/no-danger
+                  dangerouslySetInnerHTML={{ __html: content.title }}
+                ></div>
               </Heading>
               <div className="mt-12">
                 <ul className="space-y-2">
-                  {features.map((feature) => (
+                  {content.features.map((feature) => (
                     <ListFeature key={feature}>{feature}</ListFeature>
                   ))}
                 </ul>
               </div>
               <div className="mt-16">
-                <p className="text-x-green">
-                  Zu meinen Auftraggebern zählen Bauträger, Bauunternehmer sowie
-                  Ingenieur- und Architekturbüros. Diese schätzen insbesondere
-                  die <b>Optimierung der Bauabläufe</b> und die{" "}
-                  <b>Qualitätssteigerung</b> durch geballte Fachkompetenz.
-                </p>
+                <div className="text-x-green">
+                  <div
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{ __html: content.text }}
+                  ></div>
+                </div>
               </div>
             </div>
           </Container>
