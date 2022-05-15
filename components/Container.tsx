@@ -8,7 +8,7 @@ function Container({ children, layout }: Props) {
   if (layout === "sm") {
     maxWidth = "max-w-4xl";
   } else if (layout === "md") {
-    maxWidth = "max-w-7xl";
+    maxWidth = "max-w-full !p-0";
   } else if (layout === "lg") {
     maxWidth = "max-w-8xl";
   }
