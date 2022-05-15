@@ -16,7 +16,7 @@ function Component(props: Props) {
       <Container layout="md">
         <div className="bg-x-lime bg-opacity-20">
           <Container layout="sm">
-            <div className="pt-32 pb-32">
+            <div className="py-16 md:py-32">
               <Heading element="h2" size="h3" color="text-x-green">
                 <div
                   // eslint-disable-next-line react/no-danger

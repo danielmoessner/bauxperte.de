@@ -6,7 +6,6 @@ import Container from "./Container";
 import NavigationDropdown from "./NavigationDropdown";
 import NavigationLink from "./NavigationLink";
 import data from "../content/setting/navigation.json";
-import Image from "next/image";
 import Logo from "./Logo";
 import Button from "./Button";
 import { PhoneIcon } from "@heroicons/react/solid";
@@ -26,12 +25,6 @@ function Component() {
                     <Link href="/">
                       <a>
                         <div className="">
-                          {/* <Image
-                              src="/logo.svg"
-                              width={491}
-                              height={244}
-                              alt={navigation.title}
-                            /> */}
                           <Logo />
                         </div>
                       </a>
@@ -88,9 +81,9 @@ function Component() {
                       <div className="px-5 pt-4 pb-6">
                         <div className="flex items-center justify-between pb-2 border-b">
                           <Link href="/">
-                            <h1 className="text-3xl font-bold leading-tight tracking-tight text-gray-700 transition duration-150 ease-in-out hover:text-gray-800">
-                              {/* {navigation.title} */}
-                            </h1>
+                            <a href="">
+                              <Logo />
+                            </a>
                           </Link>
                           <div className="">
                             <Popover.Button className="bg-white rounded-md border-2 border-gray-100 px-2 py-1.5 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">

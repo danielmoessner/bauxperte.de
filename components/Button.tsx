@@ -52,7 +52,7 @@ function Component({
 
   const bClassName =
     className ||
-    `inline-flex items-center border-2 border-transparent font-medium rounded-md shadow-sm ${ring} ${ringOffset} ${size} ${bColor}`;
+    `inline-flex items-center border-2 border-transparent shadow-lg font-medium hover:shadow-md ${ring} ${ringOffset} ${size} ${bColor}`;
 
   return (
     <div className="bg-white rounded-md">
