@@ -52,23 +52,23 @@ function Component(props: Props) {
             <div>
               <div className="relative overflow-hidden">
                 <Image
-                  src="/img/roman.jpeg"
-                  width={1000}
-                  height={1000}
-                  objectFit="cover"
+                  src="/img/roman_sabeder.jpeg"
+                  width={802}
+                  height={694}
+                  objectFit="contain"
                   alt="Bild von Roman Sabeder"
                   objectPosition="left"
                 />
-                <div className="absolute top-0 left-0 w-16 origin-top-right transform rotate-45 bg-white lg:w-32 h-96"></div>
+                {/* <div className="absolute top-0 left-0 w-16 origin-top-right transform rotate-45 bg-white lg:w-32 h-96"></div>
                 <div className="absolute top-0 right-0 w-16 origin-top-left transform -rotate-45 bg-white lg:w-32 h-96"></div>
                 <div className="absolute bottom-0 right-0 w-16 origin-bottom-left transform rotate-45 bg-white lg:w-32 h-96"></div>
-                <div className="absolute bottom-0 left-0 w-16 origin-bottom-right transform -rotate-45 bg-white lg:w-32 h-96"></div>
+                <div className="absolute bottom-0 left-0 w-16 origin-bottom-right transform -rotate-45 bg-white lg:w-32 h-96"></div> */}
               </div>
             </div>
             <div className="flex items-center">
               <div className="">
                 <div
-                  className="prose"
+                  className="prose prose-a:text-x-lime prose-a:text-xl prose-a:no-underline hover:prose-a:opacity-90"
                   // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{ __html: content.text }}
                 ></div>

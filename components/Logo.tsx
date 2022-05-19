@@ -1,27 +1,20 @@
-function Component() {
+interface Props {
+  classes?: string;
+}
+
+function Component({ classes }: Props) {
+  if (!classes) classes = "w-32 h-16";
+
   return (
     <div>
       <svg
-        className="w-32 h-16"
+        className={classes}
         version="1.2"
-        id="Ebene_1"
-        x="0px"
-        y="0px"
         viewBox="0 0 490.80997 244.00845"
-        xmlSpace="preserve"
-        width="490.81"
-        height="244.00845"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs id="defs330" />
         <switch id="switch325" transform="translate(-52.23,-298.93577)">
-          <foreignObject
-            requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/"
-            x="0"
-            y="0"
-            width="1"
-            height="1"
-          ></foreignObject>
           <g id="g323">
             <path
               fill="#43444a"

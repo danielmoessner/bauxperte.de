@@ -27,11 +27,14 @@ function Page({ page }: Props) {
   return (
     <Layout>
       <Seo meta={meta} />
-      <Header header={header} />
-      <section className="pt-5 pb-20">
+      {/* <Header header={header} /> */}
+      <section className="pt-12 pb-20">
         <Container layout="sm">
+          <h1 className="text-4xl font-extrabold tracking-tight text-center text-gray-900 sm:text-5xl md:text-6xl">
+            <span className="block xl:inline">{header.title}</span>
+          </h1>
           <article
-            className="prose max-w-none"
+            className="mt-12 prose max-w-none"
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: page.html }}
           />

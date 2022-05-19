@@ -6,10 +6,11 @@ function Component() {
   const linkList = footer.links;
 
   return (
-    <footer className="bg-white ">
-      <Container layout="md">
+    <footer className="">
+      <div className="w-full h-1 bg-x-lime"></div>
+      <Container layout="full">
         <div className="relative overflow-hidden">
-          <div className="pt-16 pb-6 bg-x-green">
+          <div className="pt-3 pb-3 bg-x-green">
             <Container layout="sm">
               <ul className="flex items-center justify-end space-x-8">
                 {linkList.map((item) => {
@@ -46,10 +47,10 @@ function Component() {
             </Container>
           </div>
           {/* triangle stuff top */}
-          <div className="absolute top-0 left-0 z-0 w-full h-24 origin-top-left transform translate-x-[60%] -translate-y-[88px] rotate-[5deg] bg-x-lime"></div>
+          {/* <div className="absolute top-0 left-0 z-0 w-full h-24 origin-top-left transform translate-x-[60%] -translate-y-[88px] rotate-[5deg] bg-x-lime"></div>
           <div className="absolute top-0 left-0 z-0 w-full h-24 origin-top-right transform -translate-x-[40%] -translate-y-[88px] -rotate-[7deg] bg-x-lime"></div>
           <div className="absolute top-0 left-0 z-10 w-full h-24 origin-bottom-left transform translate-x-[60%] -translate-y-full rotate-[5deg] bg-white"></div>
-          <div className="absolute top-0 left-0 z-10 w-full h-24 origin-bottom-right transform -translate-x-[40%] -translate-y-full -rotate-[7deg] bg-white"></div>
+          <div className="absolute top-0 left-0 z-10 w-full h-24 origin-bottom-right transform -translate-x-[40%] -translate-y-full -rotate-[7deg] bg-white"></div> */}
         </div>
       </Container>
     </footer>

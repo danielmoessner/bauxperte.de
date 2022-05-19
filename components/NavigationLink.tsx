@@ -8,7 +8,7 @@ function Component({ link }) {
   return (
     <>
       <Link href={link.url}>
-        <a className="hidden px-3 py-1 text-base font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 md:block focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-gray-200">
+        <a className="hidden px-3 py-1 text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 md:block focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-gray-200">
           {link.text}
         </a>
       </Link>

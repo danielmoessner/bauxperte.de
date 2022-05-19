@@ -5,56 +5,13 @@ import {
   CmsFieldBase,
   CmsFieldObject,
 } from "netlify-cms-core";
-
-const linkFields = [
-  {
-    label: "Text",
-    name: "text",
-    type: "string",
-  },
-  {
-    label: "url",
-    name: "url",
-    type: "string",
-    hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf/ oder /kontakt/",
-  },
-];
-
-const link: CmsFieldBase & CmsFieldObject = {
-  label: "Interner Link",
-  name: "link",
-  widget: "object",
-  fields: linkFields,
-  collapsed: false,
-};
+import { externalLink, internalLink } from "./links";
 
 const text: CmsFieldBase & CmsFieldObject = {
   label: "Text",
   name: "text",
   widget: "object",
   fields: [{ label: "Text", name: "text", widget: "text" }],
-};
-
-const externalLinkFields = [
-  {
-    label: "Text",
-    name: "text",
-    type: "string",
-  },
-  {
-    label: "url",
-    name: "url",
-    type: "string",
-    hint: "Die URL sollte nicht auf die selbe Seite zeigen, kann aber alles enthalten. Beispiele: mailto:kontakt@tortuga-webdesign.de oder https://tortuga-webdesign.de/referenzen/",
-  },
-];
-
-const externalLink: CmsFieldBase & CmsFieldObject = {
-  label: "Externer Link",
-  name: "externalLink",
-  widget: "object",
-  fields: externalLinkFields,
-  collapsed: false,
 };
 
 const footer: CmsCollectionFile = {
@@ -64,35 +21,35 @@ const footer: CmsCollectionFile = {
   fields: [
     collection("setting"),
     slug("footer"),
-    { label: "Copyright", name: "copyright", widget: "string" },
-    { label: "Text", name: "text", widget: "text" },
+    // { label: "Copyright", name: "copyright", widget: "string" },
+    // { label: "Text", name: "text", widget: "text" },
     {
       label: "Links",
       name: "links",
       widget: "list",
-      types: [link, externalLink, text],
+      types: [internalLink, externalLink, text],
     },
-    {
-      label: "Spalten",
-      name: "columns",
-      widget: "list",
-      collapsed: false,
-      fields: [
-        { label: "Titel", name: "title", widget: "string" },
-        {
-          label: "Class (Experte)",
-          name: "class",
-          widget: "string",
-          default: "col-span-6 md:col-span-3",
-        },
-        {
-          label: "Inhalt",
-          name: "content",
-          widget: "list",
-          types: [link, externalLink, text],
-        },
-      ],
-    },
+    // {
+    //   label: "Spalten",
+    //   name: "columns",
+    //   widget: "list",
+    //   collapsed: false,
+    //   fields: [
+    //     { label: "Titel", name: "title", widget: "string" },
+    //     {
+    //       label: "Class (Experte)",
+    //       name: "class",
+    //       widget: "string",
+    //       default: "col-span-6 md:col-span-3",
+    //     },
+    //     {
+    //       label: "Inhalt",
+    //       name: "content",
+    //       widget: "list",
+    //       types: [internalLink, externalLink, text],
+    //     },
+    //   ],
+    // },
   ],
 };
 

@@ -18,5 +18,9 @@
       "text": "Kontakt",
       "url": "/#kontakt"
     }
-  ]
+  ],
+  "button": {
+    "text": "0171 95 28 649",
+    "url": "tel:01719528649"
+  }
 }

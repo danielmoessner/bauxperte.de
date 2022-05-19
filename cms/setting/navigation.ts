@@ -5,26 +5,13 @@ import {
   CmsFieldBase,
   CmsFieldObject,
 } from "netlify-cms-core";
-
-const linkFields = [
-  {
-    label: "Text",
-    name: "text",
-    type: "string",
-  },
-  {
-    label: "url",
-    name: "url",
-    type: "string",
-    hint: "Die URL muss auf die selbe Seite zeigen. Es muss am Anfang und am Ende ein Slash sein. Beispiele: /wildtiere/wolf/ oder /kontakt/",
-  },
-];
+import { externalLinkFields, internalLinkFields } from "./links";
 
 const link: CmsFieldBase & CmsFieldObject = {
   label: "Normales Item",
   name: "link",
   widget: "object",
-  fields: linkFields,
+  fields: internalLinkFields,
   collapsed: false,
 };
 
@@ -43,7 +30,7 @@ const links: CmsFieldBase & CmsFieldObject = {
       label: "Links",
       name: "links",
       widget: "list",
-      fields: linkFields,
+      fields: internalLinkFields,
     },
   ],
 };
@@ -56,16 +43,17 @@ const navigation: CmsCollectionFile = {
     collection("setting"),
     slug("navigation"),
     {
-      label: "Titel",
-      name: "title",
-      widget: "string",
-    },
-    {
       label: "Links",
       name: "links",
       widget: "list",
       collapsed: false,
       types: [link, links],
+    },
+    {
+      label: "Button",
+      name: "button",
+      widget: "object",
+      fields: externalLinkFields,
     },
   ],
 };

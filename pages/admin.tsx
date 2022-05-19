@@ -23,7 +23,7 @@ const AnimalPreview = ({ entry }) => {
 
   return (
     <AdminPreview>
-      <Container layout="md">
+      <Container layout="full">
         <div className="pt-5 pb-32">
           <AnimalComponent animal={animalData} body={html} />
           <hr className="my-10 bg-gray-600" />

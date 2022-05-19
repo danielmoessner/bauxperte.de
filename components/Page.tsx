@@ -9,7 +9,7 @@ import Layout from "../components/Layout";
 function Page() {
   return (
     <Layout>
-      <Container layout="md">
+      <Container layout="full">
         <div>Page test </div>
       </Container>
     </Layout>
