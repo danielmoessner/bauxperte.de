@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import Seo from "../../components/Seo";
-import Header from "../../components/Header";
 import Container from "../../components/Container";
 import { findMarkdown, getAllMarkdown } from "../../lib/getMarkdown";
 import { Legal } from "../../types/legal";
