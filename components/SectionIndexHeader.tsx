@@ -14,6 +14,8 @@ function Component() {
               alt="Header Bild"
               objectFit="cover"
               objectPosition="bottom"
+              priority={true}
+              // placeholder="blur"
             />
           </div>
           {/* stuff top */}
