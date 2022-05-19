@@ -67,7 +67,7 @@ contact:
     Gerne unterstütze ich Sie fachgerecht auf Projektbasis.
 
 
-    Rufen Sie mich für ein **kostenloses Erstgespräch** gerne unter [0171 95 28 649](http://localhost:3001/) an.
+    Rufen Sie mich für ein **kostenloses Erstgespräch** gerne unter [0171 95 28 649](tel:01719528649) an.
 
 
     Ich freue mich auf Ihre Anfrage!
@@ -78,9 +78,9 @@ contact:
 
     \
 
-    [www.bauxperte.de](http://localhost:3001/)\
+    [www.bauxperte.de](https://www.bauxperte.de/)\
 
-    [rs@bauxperte.de](http://localhost:3001/)
+    [rs@bauxperte.de](mailto:rs@bauxperte.de)
 header:
   title: Wildtiere in Deutschland
   text: Von wann bis wann gehen die Jagdzeiten? In welchem Gebiet sind welche
