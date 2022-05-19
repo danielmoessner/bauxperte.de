@@ -10,11 +10,11 @@ const global: CmsCollectionFile = {
     collection("setting"),
     slug("global"),
     { label: "Favicon", name: "favicon", widget: "image" },
-    {
-      label: "Tortuga Webdesign Logo",
-      name: "tortugaWebdesignLogo",
-      widget: "text",
-    },
+    // {
+    //   label: "Tortuga Webdesign Logo",
+    //   name: "tortugaWebdesignLogo",
+    //   widget: "text",
+    // },
   ],
 };
 

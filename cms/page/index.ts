@@ -1,6 +1,5 @@
 import { CmsCollection } from "netlify-cms-core";
 import home from "./home";
-import styleguide from "./styleguide";
 
 const config: CmsCollection = {
   name: "pages",
@@ -10,7 +9,7 @@ const config: CmsCollection = {
   editor: {
     preview: false,
   },
-  files: [home, styleguide],
+  files: [home],
 };
 
 export default config;

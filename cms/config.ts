@@ -6,7 +6,7 @@ import legal from "./legal/index";
 import { CmsConfig } from "netlify-cms-core";
 
 const config: CmsConfig = {
-  publish_mode: "editorial_workflow",
+  // publish_mode: "editorial_workflow",
   // See https://www.netlifycms.org/docs/configuration-options/#backend
   backend: {
     name: "git-gateway",
@@ -28,7 +28,7 @@ const config: CmsConfig = {
   // See https://www.netlifycms.org/docs/beta-features/#manual-initialization
   load_config_file: false,
   // See https://www.netlifycms.org/docs/collection-types/
-  collections: [page, animal, category, setting, legal],
+  collections: [page, setting, legal],
 };
 
 export default config;
