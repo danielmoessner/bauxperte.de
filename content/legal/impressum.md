@@ -13,9 +13,8 @@ Deutschland
 
 ### Kontakt:
 
-Telefon: 01234-789456\
-Fax: 1234-56789
-E-Mail: max@muster.de
+Telefon: 0171 95 28 649\
+E-Mail: rs@bauxperte.de
 
 ### Umsatzsteuer-ID:
 
