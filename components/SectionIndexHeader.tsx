@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "./Container";
+import headerImage from "../public/img/header.jpeg";
 
 function Component() {
   return (
@@ -10,12 +11,12 @@ function Component() {
             <Image
               width={4000}
               height={2000}
-              src="/img/header.jpeg"
+              src={headerImage}
               alt="Header Bild"
               objectFit="cover"
               objectPosition="bottom"
               priority={true}
-              // placeholder="blur"
+              placeholder="blur"
             />
           </div>
           {/* stuff top */}
