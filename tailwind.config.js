@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "420px",
+      },
       colors: {
         "x-black": "#43434a",
         "x-lime": "#a7c82a",

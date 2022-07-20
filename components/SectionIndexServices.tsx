@@ -12,18 +12,18 @@ function Component(props: Props) {
   const content = props.content;
 
   return (
-    <section className="pt-32 pb-32" id="leistungen">
+    <section className="py-16 md:py-20 lg:py-32" id="leistungen">
       <Container layout="sm">
         <Heading element="h2" size="h2">
           <div>{content.title}</div>
         </Heading>
-        <div className="mt-16">
+        <div className="mt-6 md:mt-10 lg:mt-16">
           <div className="md:hidden">
             <div className="">
               <p className="font-medium whitespace-pre">{content.text_top}</p>
             </div>
 
-            <div className="grid grid-cols-2 mt-10 gap-x-6 gap-y-8">
+            <div className="grid grid-cols-1 mt-10 xs:grid-cols-2 gap-x-6 gap-y-8">
               <div className="">
                 <div className="w-12 h-12">
                   <Image
@@ -52,7 +52,7 @@ function Component(props: Props) {
                   />
                 </div>
                 <div className="">
-                  <p className="font-normal break-words whitespace-pre">
+                  <p className="font-normal break-normal whitespace-pre">
                     {content.text_top_right}
                   </p>
                 </div>
@@ -69,7 +69,7 @@ function Component(props: Props) {
                   />
                 </div>
                 <div className="">
-                  <p className="font-normal break-words whitespace-pre">
+                  <p className="font-normal break-normal whitespace-pre">
                     {content.text_bottom_left}
                   </p>
                 </div>

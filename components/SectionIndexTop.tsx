@@ -8,7 +8,7 @@ interface Props {
 
 function Component({ content }: Props) {
   return (
-    <section className="py-32" id="ueber-mich">
+    <section className="pt-8 pb-12 md:py-20 lg:py-32" id="ueber-mich">
       <Container layout="sm">
         <Heading element="h1" size="h1">
           {content.title}

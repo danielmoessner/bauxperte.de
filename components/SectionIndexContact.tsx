@@ -42,12 +42,12 @@ function Component(props: Props) {
   const content = props.content;
 
   return (
-    <section className="pt-32 pb-32" id="kontakt">
+    <section className="py-16 lg:py-32" id="kontakt">
       <Container layout="sm">
         <Heading size="h2" element="h2">
           {content.title}
         </Heading>
-        <div className="mt-20">
+        <div className="mt-6 lg:mt-20">
           <div className="grid gap-8 sm:grid-cols-2">
             <div>
               <div className="relative overflow-hidden">
@@ -76,7 +76,7 @@ function Component(props: Props) {
             </div>
           </div>
         </div>
-        <div className="mt-32">
+        <div className="mt-12 lg:mt-32">
           <DynamicForm fields={fields} />
         </div>
       </Container>

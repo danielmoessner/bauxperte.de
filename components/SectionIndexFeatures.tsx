@@ -17,21 +17,21 @@ function Component(props: Props) {
         <div className="relative overflow-hidden">
           <div className="bg-x-lime bg-opacity-20">
             <Container layout="sm">
-              <div className="py-16 md:py-48">
+              <div className="py-20 md:py-32 lg:py-48">
                 <Heading element="h2" size="h3" color="text-x-green">
                   <div
                     // eslint-disable-next-line react/no-danger
                     dangerouslySetInnerHTML={{ __html: content.title }}
                   ></div>
                 </Heading>
-                <div className="mt-12">
+                <div className="mt-6 lg:mt-12">
                   <ul className="space-y-2">
                     {content.features.map((feature) => (
                       <ListFeature key={feature}>{feature}</ListFeature>
                     ))}
                   </ul>
                 </div>
-                <div className="mt-16">
+                <div className="mt-8 lg:mt-16">
                   <div className="text-x-green">
                     <div
                       // eslint-disable-next-line react/no-danger
