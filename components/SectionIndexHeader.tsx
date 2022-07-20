@@ -7,11 +7,10 @@ function Component() {
     <header className="">
       <Container layout="full">
         <div className="relative overflow-hidden leading-[0px]">
-          <div className="max-h-[50vh]">
+          <div className="max-h-[70vh] h-[70vh]">
             <Image
-              width={4000}
-              height={2000}
               src={headerImage}
+              layout="fill"
               alt="Header Bild"
               objectFit="cover"
               objectPosition="bottom"
