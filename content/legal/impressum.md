@@ -18,15 +18,7 @@ E-Mail: rs@bauxperte.de
 
 ### Umsatzsteuer-ID:
 
-Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: Musterustid.
-
-### Wirtschafts-ID:
-
-Musterwirtschaftsid
-
-### Aufsichtsbehörde:
-
-Musteraufsicht Musterstadt
+Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: DE325284148
 
 ### Haftungsausschluss:
 
